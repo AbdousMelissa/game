@@ -1,4 +1,4 @@
-package fr.project.formation.game.entity.morpion;
+package fr.project.formation.game.jeu.morpion;
 
 public class Main {
 

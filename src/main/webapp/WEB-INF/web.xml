@@ -6,7 +6,7 @@
          version="3.1">
 	<filter>
 		<filter-name>EncodingFilter</filter-name>
-		<filter-class>fr.formation.cocktailbar.EncodingFilter</filter-class>
+		<filter-class>fr.formation.game.EncodingFilter</filter-class>
 	</filter>
 	
 	<filter>
