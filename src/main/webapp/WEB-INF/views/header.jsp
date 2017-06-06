@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Application Cocktailbar</title>
+<title>Application game</title>
 <c:url value="/webjars/bootstrap/3.1.0" var="bootstrapUrl" />
 <c:url value="/webjars/jquery/3.1.1-1" var="jqueryUrl" />
 <c:url value="/webjars/jquery-ui/1.12.1" var="jqueryuiUrl" />

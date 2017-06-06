@@ -1,4 +1,4 @@
-package fr.project.formation.game.entity.morpion;
+package fr.project.formation.game.jeu.morpion;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
