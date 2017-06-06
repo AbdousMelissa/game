@@ -25,7 +25,8 @@ public class Display {
     }
 
     public static void displayLine(String[] tabLine){
-        System.out.println(" "+ tabLine[0] + " | "+ tabLine[1] + " | "+ tabLine[2] + " ");
+    	
+        System.out.println(" "+ (tabLine[0]=="v"?" ":tabLine[0]) + " | "+ (tabLine[1]=="v"?" ":tabLine[1]) + " | "+ (tabLine[2]=="v"?" ":tabLine[2]) + " ");
     }
 
     public static void displayGrid(String[][] tabMorpion){

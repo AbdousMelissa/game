@@ -95,7 +95,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>cocktailbar</finalName>
+		<finalName>game</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

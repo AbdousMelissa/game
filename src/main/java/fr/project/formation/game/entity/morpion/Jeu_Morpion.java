@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public class Jeu_Morpion {
 
+	String[][] tab = creationMatrice();
     static int win = 0, lose = 0, draw = 0;
 
     public static void Menu() {

@@ -10,7 +10,7 @@
       	http://www.springframework.org/schema/data/jpa
         http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
         
-	<context:component-scan base-package="fr.formation.cocktailbar.controller" />
+	<context:component-scan base-package="fr.project.formation.game.controller" />
         
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -35,6 +35,6 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 	
-	<jpa:repositories base-package="fr.formation.cocktailbar.dao" />
+	<jpa:repositories base-package="fr.project.formation.game.dao" />
 
 </beans>

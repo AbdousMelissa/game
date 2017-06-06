@@ -7,7 +7,7 @@ public class Ia {
 
     public static boolean isGameDraw(String[][] tabMorpion, int multi){
         for (int i = 0; i < 9 ; i ++) {
-            if (tabMorpion[i / 3][i % 3] == " ") {
+            if (tabMorpion[i / 3][i % 3] == "v") {
                 return false;
             }
         }
@@ -52,7 +52,7 @@ public class Ia {
     //----------------------------------------------------------------------
     //fonction ia
     public static int iaCentre(String[][] tabMorpion){
-        if (tabMorpion[1][1] == " "){
+        if (tabMorpion[1][1] == "v"){
             return 4;
         }
         return -1;
@@ -67,7 +67,7 @@ public class Ia {
         System.out.println("ici" + rand);
         int compteur = 0;
         for (int i = 0; i < 9; i++){
-            if (tabMorpion[i/3][i%3] == " "){
+            if (tabMorpion[i/3][i%3] == "v"){
                 compteur++;
             }
             if (compteur-1 == rand){
@@ -81,33 +81,33 @@ public class Ia {
         String symbole = "OO";
         for (int i = 0; i<3; i++) {
             //line horizontal
-            if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][1]) && tabMorpion[i][2] == " "){
+            if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][1]) && tabMorpion[i][2] == "v"){
                 return (i*3+2);
-            }else if (symbole.equals(tabMorpion[i][1] + tabMorpion[i][2]) && tabMorpion[i][0] == " "){
+            }else if (symbole.equals(tabMorpion[i][1] + tabMorpion[i][2]) && tabMorpion[i][0] == "v"){
                 return (i*3);
-            }else if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][2]) && tabMorpion[i][1] == " "){
+            }else if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][2]) && tabMorpion[i][1] == "v"){
                 return (i*3+1);
             }
             //line verticale
-            if (symbole.equals(tabMorpion[0][i] + tabMorpion[1][i]) && tabMorpion[2][i] == " "){
+            if (symbole.equals(tabMorpion[0][i] + tabMorpion[1][i]) && tabMorpion[2][i] == "v"){
                 return (i+2*3);
-            }else if (symbole.equals(tabMorpion[1][i] + tabMorpion[2][i]) && tabMorpion[0][i] == " "){
+            }else if (symbole.equals(tabMorpion[1][i] + tabMorpion[2][i]) && tabMorpion[0][i] == "v"){
                 return (i);
-            }else if (symbole.equals(tabMorpion[0][i] + tabMorpion[2][i]) && tabMorpion[1][i] == " "){
+            }else if (symbole.equals(tabMorpion[0][i] + tabMorpion[2][i]) && tabMorpion[1][i] == "v"){
                 return (i+3);
             }
         }
         //diagonale
-        if (symbole.equals(tabMorpion[0][0] + tabMorpion[1][1]) && tabMorpion[2][2] == " "){
+        if (symbole.equals(tabMorpion[0][0] + tabMorpion[1][1]) && tabMorpion[2][2] == "v"){
             return 8;
-        }else if (symbole.equals(tabMorpion[2][2] + tabMorpion[1][1]) && tabMorpion[0][0] == " "){
+        }else if (symbole.equals(tabMorpion[2][2] + tabMorpion[1][1]) && tabMorpion[0][0] == "v"){
             return 0;
-        }else if ((symbole.equals(tabMorpion[2][2] + tabMorpion[0][0]) && tabMorpion[1][1] == " ") ||
-                (symbole == (tabMorpion[0][2] + tabMorpion[2][0]) && tabMorpion[1][1] == " ")){
+        }else if ((symbole.equals(tabMorpion[2][2] + tabMorpion[0][0]) && tabMorpion[1][1] == "v") ||
+                (symbole == (tabMorpion[0][2] + tabMorpion[2][0]) && tabMorpion[1][1] == "v")){
             return 4;
-        }else if (symbole.equals(tabMorpion[0][2] + tabMorpion[1][1]) && tabMorpion[2][0] == " "){
+        }else if (symbole.equals(tabMorpion[0][2] + tabMorpion[1][1]) && tabMorpion[2][0] == "v"){
             return 6;
-        }else if (symbole.equals(tabMorpion[2][0] + tabMorpion[1][1]) && tabMorpion[0][2] == " "){
+        }else if (symbole.equals(tabMorpion[2][0] + tabMorpion[1][1]) && tabMorpion[0][2] == "v"){
             return 2;
         }
         return -1;
@@ -117,33 +117,33 @@ public class Ia {
         String symbole = "XX";
         for (int i = 0; i<3; i++) {
             //line horizontal
-            if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][1]) && tabMorpion[i][2] == " "){
+            if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][1]) && tabMorpion[i][2] == "v"){
                 return (i*3+2);
-            }else if (symbole.equals(tabMorpion[i][1] + tabMorpion[i][2]) && tabMorpion[i][0] == " "){
+            }else if (symbole.equals(tabMorpion[i][1] + tabMorpion[i][2]) && tabMorpion[i][0] == "v"){
                 return (i*3);
-            }else if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][2]) && tabMorpion[i][1] == " "){
+            }else if (symbole.equals(tabMorpion[i][0] + tabMorpion[i][2]) && tabMorpion[i][1] == "v"){
                 return (i*3+1);
             }
             //line verticale
-            if (symbole.equals(tabMorpion[0][i] + tabMorpion[1][i]) && tabMorpion[2][i] == " "){
+            if (symbole.equals(tabMorpion[0][i] + tabMorpion[1][i]) && tabMorpion[2][i] == "v"){
                 return (i+2*3);
-            }else if (symbole.equals(tabMorpion[1][i] + tabMorpion[2][i]) && tabMorpion[0][i] == " "){
+            }else if (symbole.equals(tabMorpion[1][i] + tabMorpion[2][i]) && tabMorpion[0][i] == "v"){
                 return (i);
-            }else if (symbole.equals(tabMorpion[0][i] + tabMorpion[2][i]) && tabMorpion[1][i] == " "){
+            }else if (symbole.equals(tabMorpion[0][i] + tabMorpion[2][i]) && tabMorpion[1][i] == "v"){
                 return (i+3);
             }
         }
         //diagonale
-        if (symbole.equals(tabMorpion[0][0] + tabMorpion[1][1]) && tabMorpion[2][2] == " "){
+        if (symbole.equals(tabMorpion[0][0] + tabMorpion[1][1]) && tabMorpion[2][2] == "v"){
             return 8;
-        }else if (symbole.equals(tabMorpion[2][2] + tabMorpion[1][1]) && tabMorpion[0][0] == " "){
+        }else if (symbole.equals(tabMorpion[2][2] + tabMorpion[1][1]) && tabMorpion[0][0] == "v"){
             return 0;
-        }else if ((symbole.equals(tabMorpion[2][2] + tabMorpion[0][0]) && tabMorpion[1][1] == " ") ||
-                (symbole == (tabMorpion[0][2] + tabMorpion[2][0]) && tabMorpion[1][1] == " ")){
+        }else if ((symbole.equals(tabMorpion[2][2] + tabMorpion[0][0]) && tabMorpion[1][1] == "v") ||
+                (symbole == (tabMorpion[0][2] + tabMorpion[2][0]) && tabMorpion[1][1] == "v")){
             return 4;
-        }else if (symbole.equals(tabMorpion[0][2] + tabMorpion[1][1]) && tabMorpion[2][0] == " "){
+        }else if (symbole.equals(tabMorpion[0][2] + tabMorpion[1][1]) && tabMorpion[2][0] == "v"){
             return 6;
-        }else if (symbole.equals(tabMorpion[2][0] + tabMorpion[1][1]) && tabMorpion[0][2] == " "){
+        }else if (symbole.equals(tabMorpion[2][0] + tabMorpion[1][1]) && tabMorpion[0][2] == "v"){
             return 2;
         }
         return -1;
@@ -170,7 +170,7 @@ public class Ia {
     public static int nombreEspace(String[][] tabMorpion){
         int compteur = 0;
         for (int i = 0; i < 9; i++){
-            if (tabMorpion[i/3][i%3] == " "){
+            if (tabMorpion[i/3][i%3] == "v"){
                 compteur++;
             }
         }
